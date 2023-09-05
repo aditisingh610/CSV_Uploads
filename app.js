@@ -3,7 +3,7 @@ const multer = require("multer");
 const csvParser = require("csv-parser");
 const fs = require("fs");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Create a storage engine that only accepts CSV files
 const storage = multer.diskStorage({
